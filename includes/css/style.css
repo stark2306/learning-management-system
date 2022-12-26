@@ -1,0 +1,29 @@
+/*
+    Global styling of the website
+*/
+
+/*aterisk mark on the forms*/
+.required-mark,.required-label,.password-mismatch-label,#passwords-mismatch,.not-available{
+    color:rgb(216, 19, 19);
+}
+
+#passwords-match,.available{
+    color: rgb(101, 161, 10);
+}
+
+.passwords-exceed-label,.enter-original-password,.short-username{
+    color: rgb(218, 151, 27);
+}
+
+.registration-container-wrapper
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+
+.registration-form-container,.registration-form-pic-container{
+    width: 49%;
+    height: 600px;
+    display: inline-block;
+}
