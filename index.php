@@ -3,21 +3,71 @@
 
   ?>
 
-<section class="section-divider hero-banner parallax overlay"
-  style="background-image:url('/includes/images/hero-banner.png')">
-  <div class="container pt-3">
-    <div class="row align-items-center">
-      <div class="col-lg-6 line-left mb-5 text-capitalize text-white">
-        <h2 class="mb-5">our services</h2>
-        
-      </div>
-
+<section class="hero-slider">
+  <div>
+    <img src="/includes/images/slider-1.jpeg" alt="slider-img-1">
+    <div class="inner-content">
+      <H1>the dublin cricket Academy</H1>
+    </div>
+  </div>
+  <div>
+    <img src="/includes/images/slider-2.jpg" alt="slider-img-2">
+    <div class="inner-content">
+      <H1>the dublin cricket Academy</H1>
+    </div>
+  </div>
+  <div>
+    <img src="/includes/images/slider-3.jpeg" alt="slider-img-3">
+    <div class="inner-content">
+      <H1>the dublin cricket Academy</H1>
     </div>
   </div>
 </section>
 
+<section class="about container text-center py-5">
+  <h2 class="mb-4">Who We Are</h2>
+  <h4 class="w-60">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem omnis dolores, sint, quia reprehenderit
+    quod harum, consectetur aliquam reiciendis aspernatur. Possimus nostrum praesentium, recusandae at explicabo dolores
+    provident animi.</h4>
+  <!-- I used bootstrap structure for this section -->
+  <div class="row py-5">
+    <div class="col-md-3">
+      <span class="mb-4">
+        20
+      </span>
+      <h5>
+        No. of Academies
+      </h5>
+    </div>
+    <div class="col-md-3"> <span class="mb-4">
+        <span class="mb-4">
+          1K+
+        </span>
+        <h5>
+          Academy Students
+        </h5>
+    </div>
+    <div class="col-md-3">
+      <span class="mb-4">
+        500+
+      </span>
+      <h5>
+        Online Students
+      </h5>
+    </div>
+    <div class="col-md-3">
+      <span class="mb-4">
+        100+
+      </span>
+      <h5>
+        Online Certificates
+      </h5>
+    </div>
+  </div>
+</section>
+<!-- 
 <section class="banner-wrapper container-fluidf">
-  <div class="container home-banner d-flex align-items-center">
+  <div class="container home-banner d-flex align-items-center py-4">
     <div class="w-75">
       <div class="text-wrapper">
         <h1>THE KING KHOLI</h1>
@@ -32,8 +82,104 @@
       <img class="registration-image" src="/includes/images/home-banner.jpeg">
     </div>
   </div>
+</section> -->
+
+<section class="hero-banner parallax overlay" style="background-image:url('/includes/images/hero-banner.png')">
+  <div class="container px-3 py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 line-left text-capitalize text-white text-center">
+        <div class="feature-cards px-3 py-4 text-white mb-5">
+          <div class="feature-cards-img">
+            <img src="/includes/images/cards-img.png" alt="">
+          </div>
+          <h5> Telephony Suite/Dialer</h5>
+          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
+            tracking, and listen and barge. You'll save a lot of administrative task time and be
+            able to better train your salespeople with these.</p>
+          <a href="#" class="cmn-btn">Read more</a>
+        </div>
+        <!-- <div class="feature-cards px-3 py-4 text-white mb-5">
+          <div class="feature-cards-img">
+            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
+          </div>
+          <h5> Telephony Suite/Dialer</h5>
+          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
+            tracking, and listen and barge. You'll save a lot of administrative task time and be
+            able to better train your salespeople with these.</p>
+          <a href="#" class="cmn-btn">Read more</a>
+        </div>
+        <div class="feature-cards px-3 py-4 text-white">
+          <div class="feature-cards-img">
+            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
+          </div>
+          <h5> Telephony Suite/Dialer</h5>
+          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
+            tracking, and listen and barge. You'll save a lot of administrative task time and be
+            able to better train your salespeople with these.</p>
+          <a href="#" class="cmn-btn">Read more</a>
+        </div> -->
+      </div>
+
+      <div class="col-lg-6 line-left text-capitalize text-white text-center">
+        <div class="feature-cards px-3 py-4 text-white mb-5">
+          <div class="feature-cards-img">
+            <img src="/includes/images/cards-img.png" alt="">
+          </div>
+          <h5> Telephony Suite/Dialer</h5>
+          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
+            tracking, and listen and barge. You'll save a lot of administrative task time and be
+            able to better train your salespeople with these.</p>
+          <a href="#" class="cmn-btn">Read more</a>
+        </div>
+        <!-- <div class="feature-cards px-3 py-4 text-white mb-5">
+          <div class="feature-cards-img">
+            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
+          </div>
+          <h5> Telephony Suite/Dialer</h5>
+          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
+            tracking, and listen and barge. You'll save a lot of administrative task time and be
+            able to better train your salespeople with these.</p>
+          <a href="#" class="cmn-btn">Read more</a>
+        </div>
+        <div class="feature-cards px-3 py-4 text-white">
+          <div class="feature-cards-img">
+            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
+          </div>
+          <h5> Telephony Suite/Dialer</h5>
+          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
+            tracking, and listen and barge. You'll save a lot of administrative task time and be
+            able to better train your salespeople with these.</p>
+          <a href="#" class="cmn-btn">Read more</a>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
 </section>
+
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">GET IN TOUCH</h2>
+    <H5 class="w-60">
+    You’ll have the opportunity to excel professionally and personally, being part of a team that dedicated to furthering our academic endeavours.
+    </H5>
+    <a href="/register.php" class="cmn-btn d-inline-block mb-4 mt-5">GET IN TOUCH</a>
+  </div>
+</section>
+
 
 <?php
   include_once 'footer.php';    //footer of the website
 ?>
+
+
+<script>
+  $('.hero-slider').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 2000,
+  });
+</script>
