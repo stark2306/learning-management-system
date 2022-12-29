@@ -398,6 +398,47 @@ header button {
     object-fit: cover;
 }
 
+/* CSS for Testimonial slider */
+.testimonial-slider.slick-dotted.slick-slider{
+    margin-bottom: 0px;
+}
+
+.testimonial-slider .slick-dots{
+    bottom: 50px;
+}
+
+.testimonial-slider .slick-slide img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.testimonial-slider .slick-dots li button::before{
+    color: white;
+    opacity: 1;
+    font-size: 20px;
+} 
+
+.testimonial-slider .slick-dots li.slick-active button::before{
+    color: #00aeef;
+}
+
+.testimonial-slider .inner-content{
+    width: 75%;
+}
+
+.testimonial-slider .inner-content h4{
+    color: #fff;
+}
+
+/* CSS for About Us section */
+.about-us img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid  #00aeef;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 /* CSS for footer */
 

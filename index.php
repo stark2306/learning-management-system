@@ -26,7 +26,8 @@
 
 <section class="about container text-center py-5">
   <h2 class="mb-4">Who We Are</h2>
-  <h4 class="w-60">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem omnis dolores, sint, quia reprehenderit
+  <h4 class="w-60">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem omnis dolores, sint, quia
+    reprehenderit
     quod harum, consectetur aliquam reiciendis aspernatur. Possimus nostrum praesentium, recusandae at explicabo dolores
     provident animi.</h4>
   <!-- I used bootstrap structure for this section -->
@@ -87,71 +88,41 @@
 <section class="hero-banner parallax overlay" style="background-image:url('/includes/images/hero-banner.png')">
   <div class="container px-3 py-5">
     <div class="row align-items-center">
-      <div class="col-lg-6 line-left text-capitalize text-white text-center">
+      <article class="col-lg-6 line-left text-capitalize text-white text-center">
         <div class="feature-cards px-3 py-4 text-white mb-5">
           <div class="feature-cards-img">
             <img src="/includes/images/cards-img.png" alt="">
           </div>
-          <h5> Telephony Suite/Dialer</h5>
-          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
-            tracking, and listen and barge. You'll save a lot of administrative task time and be
-            able to better train your salespeople with these.</p>
+          <h5 class="pb-3 text-dark"> Telephony Suite/Dialer</h5>
+          <ol class="text-left text-dark">
+            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
+                href="/register.php">Read more</a></li>
+            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
+                href="/register.php">Read more</a></li>
+            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
+                href="/register.php">Read more</a></li>
+          </ol>
           <a href="#" class="cmn-btn">Read more</a>
         </div>
-        <!-- <div class="feature-cards px-3 py-4 text-white mb-5">
-          <div class="feature-cards-img">
-            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
-          </div>
-          <h5> Telephony Suite/Dialer</h5>
-          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
-            tracking, and listen and barge. You'll save a lot of administrative task time and be
-            able to better train your salespeople with these.</p>
-          <a href="#" class="cmn-btn">Read more</a>
-        </div>
-        <div class="feature-cards px-3 py-4 text-white">
-          <div class="feature-cards-img">
-            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
-          </div>
-          <h5> Telephony Suite/Dialer</h5>
-          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
-            tracking, and listen and barge. You'll save a lot of administrative task time and be
-            able to better train your salespeople with these.</p>
-          <a href="#" class="cmn-btn">Read more</a>
-        </div> -->
-      </div>
+      </article>
 
-      <div class="col-lg-6 line-left text-capitalize text-white text-center">
+      <article class="col-lg-6 line-left text-capitalize text-white text-center">
         <div class="feature-cards px-3 py-4 text-white mb-5">
           <div class="feature-cards-img">
             <img src="/includes/images/cards-img.png" alt="">
           </div>
-          <h5> Telephony Suite/Dialer</h5>
-          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
-            tracking, and listen and barge. You'll save a lot of administrative task time and be
-            able to better train your salespeople with these.</p>
+          <h5 class="pb-3 text-dark"> Telephony Suite/Dialer</h5>
+          <ol class="text-left text-dark">
+            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
+                href="/register.php">Read more</a></li>
+            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
+                href="/register.php">Read more</a></li>
+            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
+                href="/register.php">Read more</a></li>
+          </ol>
           <a href="#" class="cmn-btn">Read more</a>
         </div>
-        <!-- <div class="feature-cards px-3 py-4 text-white mb-5">
-          <div class="feature-cards-img">
-            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
-          </div>
-          <h5> Telephony Suite/Dialer</h5>
-          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
-            tracking, and listen and barge. You'll save a lot of administrative task time and be
-            able to better train your salespeople with these.</p>
-          <a href="#" class="cmn-btn">Read more</a>
-        </div>
-        <div class="feature-cards px-3 py-4 text-white">
-          <div class="feature-cards-img">
-            <img src="images/salesEngagement-factors-card-icon-3.png" alt="">
-          </div>
-          <h5> Telephony Suite/Dialer</h5>
-          <p>Some desirable features are click-to-call, live agent power dialer, call recording and
-            tracking, and listen and barge. You'll save a lot of administrative task time and be
-            able to better train your salespeople with these.</p>
-          <a href="#" class="cmn-btn">Read more</a>
-        </div> -->
-      </div>
+      </article>
 
     </div>
   </div>
@@ -161,7 +132,8 @@
   <div class="container text-center">
     <h2 class="mb-4">GET IN TOUCH</h2>
     <H5 class="w-60">
-    You’ll have the opportunity to excel professionally and personally, being part of a team that dedicated to furthering our academic endeavours.
+      You’ll have the opportunity to excel professionally and personally, being part of a team that dedicated to
+      furthering our academic endeavours.
     </H5>
     <a href="/register.php" class="cmn-btn d-inline-block mb-4 mt-5">GET IN TOUCH</a>
   </div>
