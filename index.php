@@ -91,9 +91,9 @@
       <article class="col-lg-6 line-left text-capitalize text-white text-center">
         <div class="feature-cards px-3 py-4 text-white mb-5">
           <div class="feature-cards-img">
-            <img src="/includes/images/cards-img.png" alt="">
+            <img src="/includes/images/upcoming-events.jpeg" alt="logo-events">
           </div>
-          <h5 class="pb-3 text-dark"> Telephony Suite/Dialer</h5>
+          <h4 class="pY-3 text-dark">UPCOMING EVENTS</h4>
           <ol class="text-left text-dark">
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
                 href="/register.php">Read more</a></li>
@@ -109,9 +109,9 @@
       <article class="col-lg-6 line-left text-capitalize text-white text-center">
         <div class="feature-cards px-3 py-4 text-white mb-5">
           <div class="feature-cards-img">
-            <img src="/includes/images/cards-img.png" alt="">
+            <img src="/includes/images/membership.jpeg" alt="membership-logo">
           </div>
-          <h5 class="pb-3 text-dark"> Telephony Suite/Dialer</h5>
+          <h4 class="pY-3 text-dark">MEMBERSHIP</h4>
           <ol class="text-left text-dark">
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
                 href="/register.php">Read more</a></li>

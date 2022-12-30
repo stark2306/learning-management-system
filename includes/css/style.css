@@ -234,7 +234,10 @@ form textarea::placeholder {
 }
 
 .feature-cards-img img{
-    height: 130px;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .feature-cards h5 {
@@ -426,6 +429,14 @@ header button {
     width: 75%;
 }
 
+.testimonial-slider .inner-content article{
+    color: #FFB82C;
+}
+
+.testimonial-slider .inner-content article h4{
+    color: #FFB82C;
+}
+
 .testimonial-slider .inner-content h4{
     color: #fff;
 }
@@ -439,6 +450,26 @@ header button {
     object-fit: cover;
 }
 
+/* CSS for admin page */
+main{
+    min-height: calc(100vh - 527px);
+}
+
+.admin-panel aside{
+    background-color: #000000;
+    border-right: 1px solid #000000;
+}
+
+.admin-panel aside ul li a{
+      color: white;
+      padding-left: 8px;   
+      padding-top: 8px;
+}
+
+.admin-panel aside ul li a:hover{
+        text-decoration: none;
+        color: goldenrod;
+}
 
 /* CSS for footer */
 

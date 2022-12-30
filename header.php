@@ -103,6 +103,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/register.php">register now</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/membership.php">memberhsip</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin.php">admin</a>
+                        </li>
                     </ul>
                 </div>
                 <form class="form-inline my-2 my-lg-0">

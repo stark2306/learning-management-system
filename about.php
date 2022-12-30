@@ -50,13 +50,13 @@
         transition from soft ball to hard ball cricket. Special shout out to Coaches as in very short time period they
         made me comfortable in the academy and helped improving my skills significantly in preparation for my U11 Warcks
         trials.”</H4>
-        <article class="text-right mt-3">
-          <h5 class="mb-0">- Ron</h5>
+        <article class="text-center mt-4">
+          <h4 class="mb-0">- Ron</h4>
           <h6 class="mb-0">
-            Early birds
+            Master Blaster
           </h6>
           <span>
-            20-Dec-2020
+            18-Aug-2022
           </span>
         </article>
     </div>
@@ -70,13 +70,13 @@
         attitude towards the game really grew. We got the great news today that Pete has been selected for Warwickshire
         County Cricket Club. Thank you to Dublin Academy for helping Akbar on his journey.We highly commend you and of
         course, recommend you highly too."</H4>
-        <article class="text-right mt-3">
-          <h5 class="mb-0">- Ron</h5>
+        <article class="text-center mt-4">
+          <h4 class="mb-0">- Pete's Parents</h4>
           <h6 class="mb-0">
             Early birds
           </h6>
           <span>
-            20-Dec-2020
+            20-Dec-2021
           </span>
         </article>
     </div>
@@ -87,17 +87,21 @@
       <H4>"Absolutely wonderful crew of people! They were completely transparent the whole way
         through the process and were so lovely. I would recommend them to anyone who wants great future in Cricket."
       </H4>
-      <article class="text-right mt-3">
-          <h5 class="mb-0">- Ron</h5>
+      <article class="text-center mt-4">
+          <h4 class="mb-0">- Monica</h4>
           <h6 class="mb-0">
-            Early birds
+            Ace of the Pitch
           </h6>
           <span>
-            20-Dec-2020
+            06-sep-2021
           </span>
         </article>
     </div>
   </article>
+</section>
+
+<section class="container my-3 text-center">
+    <a href="#" class="cmn-btn my-3 d-inline-block">View More Testimonials</a>
 </section>
 
 
@@ -112,6 +116,6 @@
     slidesToShow: 1,
     autoplay: true,
     arrows: false,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 6000,
   });
 </script>
