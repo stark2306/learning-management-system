@@ -1,9 +1,6 @@
 <?php
     $password_hash = md5($password);
-    require 'connect.php';
-    $query = "INSERT INTO registered_user (individual_name, email, contact, username, user_password, activation_key) VALUES ('$name','$email',$contact,'$username','$password_hash', '$activation_key')";
-    
-    if (mysqli_query($connection, $query)) {
+    require 'connect.php';  
       $url = "http://cricketacademy.test/db-queries/update-activation-status.php?activation_key=".$activation_key."";
       $headers  = 'MIME-Version: 1.0' . "\r\n";
       $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -18,14 +15,17 @@
       $message .='Admin';
       if(mail($email,$subject,$message,$headers))
       {
-          header('Location: ./register.php?activation=sent');
+        $query = "INSERT INTO registered_user (individual_name, email, contact, username, user_password, activation_key, role_selected) VALUES ('$name','$email',$contact,'$username','$password_hash', '$activation_key', '$user_role_selected')";
+        if (mysqli_query($connection, $query)) {
+          header('Location: ./registeration.php?activation=sent');
+        }
+        else{
+          header('Location: ../registeration.php?activation=failed');
+        }  
       }
       else
       {
-          header('Location: ./register.php?activation=sentfailed');
+          header('Location: ./registeration.php?activation=sentfailed');
       }
-    } else {
-      header('Location: ../register.php?activation=failed');
-    }
     mysqli_close($connection);
 ?>

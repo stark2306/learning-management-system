@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    $.getJSON('../../db-queries/connect.php', function(data) {
-        console.log(data);
-   })
+
     function trim_data(field_data) {
         let data = field_data.trim();
         return data;
