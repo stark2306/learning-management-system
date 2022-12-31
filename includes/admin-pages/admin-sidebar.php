@@ -1,3 +1,5 @@
+<!-- admin sidebar navigation -->
+
 <main>
   <section class="admin-panel">
     <article class="row">

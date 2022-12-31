@@ -1,4 +1,6 @@
 <?php
+    // Template : testimonials
+
     include_once 'header.php';
     ?>
     <main>
@@ -12,6 +14,7 @@
 
                   <section class="hero-slider testimonial-slider text-center">
                         <?php
+                    //loop to show the approved testimonials on the page
                     for($i=0;$i<count($results);$i++){
                             ?>
                               <article>

@@ -1,27 +1,37 @@
 <?php
     include_once 'header.php';
 
-    if(isset($_GET['activation']) && $_GET['activation'] == 'sent'){
+    /**
+     *  show alert messages to users based on session variables 
+     */
+
+     /**
+      *  sessions for status of activation email after filling out the registeration form
+      */
+    if(isset($_SESSION['activation']) && $_SESSION['activation'] == 'sent'){
         echo "<div class='alert alert-success' style='text-align: center;'>We have sent an activation link on your email. Please activate your registration now.</div>";
     }
-    elseif(isset($_GET['activation']) && $_GET['activation'] == 'sentfailed'){
+    elseif(isset($_SESSION['activation']) && $_SESSION['activation'] == 'sentfailed'){
         echo "<div class='alert alert-danger' style='text-align: center;'>There was an error in sending activation mail to the email provided</div>";
     }
-    elseif(isset($_GET['activation']) && $_GET['activation'] == 'failed'){
-        echo "<div class='alert alert-danger' style='text-align: center;'>Error sending mail on above email. Try again with different mail.</div>";
+    elseif(isset($_SESSION['activation']) && $_SESSION['activation'] == 'failed'){
+        echo "<div class='alert alert-danger' style='text-align: center;'>Error sending mail on email entered. Try again with different mail.</div>";
     }
   
-
-    if(isset($_GET['activation_status']) && $_GET['activation_status'] == 'updatesuccess'){
+    /**
+     * sessions for updated activation status of users 
+     */
+    if(isset($_SESSION['activation_status']) && $_SESSION['activation_status'] == 'updatesuccess'){
         echo "<div class='alert alert-success' style='text-align: center;'>Congratulations, you have successfully registered with us.</div>";
     }
-    elseif(isset($_GET['activation_status']) && $_GET['activation_status'] == 'updatefailed'){
-        echo "<div class='alert alert-danger' style='text-align: center;'>Sorry, there was an error in updating your request status.</div>";
+    elseif(isset($_SESSION['activation_status']) && $_SESSION['activation_status'] == 'updatefailed'){
+        echo "<div class='alert alert-danger' style='text-align: center;'>Activation failed</div>";
     }
     ?>
     <main>
+    
     <?php
-    include_once './includes/class_cards_registration.php';
+        include_once './includes/class_cards_registration.php';   //template for membership cards showing on registration page
     ?>
 
 
@@ -34,6 +44,8 @@
             <div class="col-lg-6 text-capitalize text-white text-center">
                 <div class="d-flex align-items-center registration my-5">
                     <div class="registration-form-container">
+
+                    <!-- Registeration Form -->
                         <h3>Register Now</h3>
                         <form method="post" name="register_yourself" id="registration_form" action="registration-process.php">
                             <input type="text" id="name" class="register-inputs" name="name" placeholder="NAME">
@@ -63,6 +75,7 @@
     </div>
 </section>
 </main>
+
 <?php
     include_once 'footer.php';
 ?>

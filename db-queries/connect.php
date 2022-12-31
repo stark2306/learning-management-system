@@ -1,5 +1,9 @@
 <?php
-$servername = "localhost";
+/*
+    database configuration file. update the credentials here according to environment.
+*/ 
+
+$servername = "localhost";    
 $db_username = "wilson";
 $db_password = "1234";
 $database = "cricket_management_system";

@@ -1,4 +1,6 @@
 <?php
+   //Template: gallery
+
     include_once 'header.php';
     ?>
 

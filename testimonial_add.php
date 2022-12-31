@@ -1,9 +1,14 @@
 <?php
+  /**
+   *  script to publish testimonails for logged in users
+   */
     include_once 'header.php';
     include_once './includes/testimonial_class.php';
     ?>
     <main>
     <?php
+
+    //conditional to restrict only members and admins to publish their testimonials bassed on session variables set
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'member' || $_SESSION['member_type'] == 'admin')){
             if(isset($_GET['membership_class'])){
                 $membership_class = $_GET['membership_class'];
@@ -14,17 +19,19 @@
             $username = $_SESSION['logged_in_username'];
             $testimonial = new testimonials($membership_class, $username);
                 if(isset($_POST['add_testimonial'])){
-                    $testimonial->set_testimonial_data($_POST['add_testimonial'], date('Y-m-d H:i:s'));
+                    $testimonial->set_testimonial_data($_POST['add_testimonial'], date('Y-m-d H:i:s'));    //intantiating the object of testimonali_class
                     $testimonial->add_my_testimonial_to_db();
                 }
                     $results = $testimonial->show_testimonials($username);
             ?>
+            <!--  testimonial form -->
             <form name="my_testimonial" id="my_testimonial" method="post">
                 <textarea name="add_testimonial" id="my-testimonial" cols="30" rows="10" placeholder="Add your testimonial...." required></textarea>
             </form>
             <button form="my_testimonial" type="submit" class="btn btn-lg btn-success text-center text-white" name="testimonial_type" value="publish_my_testimonial">Publish Testimonial</button>
             <button onclick="window.location.href='/testimonial.php'" class="btn btn-lg btn-primary text-center text-white">View All Testimonial</button>
             <?php 
+                   //bulid testimonial history table of the currently logged in user
                     if(count($results) >0)
                     {
                     ?>

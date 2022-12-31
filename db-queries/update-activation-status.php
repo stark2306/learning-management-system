@@ -1,4 +1,10 @@
 <?php
+    
+    /**
+     *  script to update activation status of users and insert login credentials in a seperate table  after successfully activating their registeration
+     */
+    session_start();
+    unset($_SESSION['activation_status']);
     require 'connect.php';
     if(isset($_GET['activation_key']))
     {
@@ -22,7 +28,8 @@
                     $login_query = "INSERT INTO login_details (username, password) VALUES ('$row[0]','$row[1]')";
                     if(mysqli_query($connection, $login_query))
                     {
-                        header('Location: ../registeration.php?activation_status=updatesuccess');
+                        $_SESSION['activation_status'] = 'updatesuccess';
+                        header('Location: ../registeration.php');
                     }
                     else
                     {
@@ -31,7 +38,8 @@
                 }
                 else
                 {
-                    header('Location: ../registeration.php?activation_status=updatefailed');
+                    $_SESSION['activation_status'] = 'updatefailed';
+                    header('Location: ../registeration.php');
                 }
             }
         }

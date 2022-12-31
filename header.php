@@ -1,7 +1,7 @@
 <?php
      session_start();
 ?>
-
+<!-- header of the file-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,6 +97,9 @@
                             if(mysqli_query($connection, $page_query)){
                                 $results = mysqli_fetch_all(mysqli_query($connection, $page_query), MYSQLI_ASSOC);
                                 if(count($results) >0 ){
+
+                                    //loop to make nav bar options dynamic by querying the pages in db
+                                    
                                    for($i=0;$i<count($results);$i++)
                                    {
                                         if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'member' || $_SESSION['member_type'] == 'admin')){

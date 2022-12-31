@@ -1,4 +1,4 @@
-</body>
+<!-- footer of the website -->
 
 <footer class="parallax overlay pt-5 pb-1" style="background-image: url(images/footer.jpg);">
         <div class="container">
@@ -99,7 +99,15 @@
             </div>
         </div>
     </footer>
-
+    
+    <!-- fade out the alerts after 3 seconds-->
+    <script>
+    $(document).ready(function(){
+        setTimeout(() => {
+        $(".alert").fadeOut();
+    }, 3000);
+    })
+</script>
 <?php
     /**
      *  add a particular js on a particular page to avoid loading unncessary js on every page
@@ -111,13 +119,8 @@
         if(substr_compare($current_url,'http://cricketacademy.test/register.php',0,strlen('http://cricketacademy.test/register.php'),false) == 0 || substr_compare($current_url,'http://cricketacademy.test/register.php',0,strlen('http://cricketacademy.test/register.php'),false)>0){
                 echo "<script src='/includes/js/registration-form-validation.js'></script>";
         }
-        //if()
-        // switch("$current_url")
-        // {
-        //     case 'http://cricketacademy.test/register.php': echo "<script src='/includes/js/registration-form-validation.js'></script>";
-        //     break;
-        // }
     }
     enqueue_script();
 ?>
+</body>
 </html>

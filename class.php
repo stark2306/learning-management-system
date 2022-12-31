@@ -1,4 +1,7 @@
 <?php
+
+  //Template: class (memberships)
+
   include_once 'header.php';    //header of the website
 
   include_once './includes/class_cards.php';

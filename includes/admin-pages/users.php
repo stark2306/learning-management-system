@@ -1,5 +1,13 @@
 <?php   
+    // script to get the registered user details and build a user table for admin view
+
     class get_user_details{
+
+         /**
+         * description: fetch the registered_user from db
+         * @param void
+         * @return (array) $results
+         */
         public static function user_query(){
             require '../../db-queries/connect.php';
             $query = "SELECT individual_name, email, contact, role_selected, is_active FROM registered_user";
@@ -17,6 +25,12 @@
             }
             mysqli_close($connection);
         }
+
+         /**
+         * description: build the user table for admin view
+         * @param array
+         * @return void
+         */
         public static function build_table($dataarray = NULL){
             if($dataarray)
             {
@@ -88,7 +102,9 @@
         }
         }
     }
+
     include_once '../../header.php';
+    //conditional to restrict only admins to view this section and prevent unauthenticated access to this section
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && $_SESSION['member_type'] == 'admin')
     {
         include_once "./admin-sidebar.php";

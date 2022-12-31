@@ -1,4 +1,7 @@
 <?php
+  
+   // Template: login page
+
     include_once 'header.php';
 
     if(isset($_GET['status']) && $_GET['status'] == 'activate_registration'){
@@ -12,6 +15,7 @@
     }
 ?>
 <main>
+    <!-- login form -->
     <form method="POST" name="login_form" id="login_form" action="login-processing.php">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" class="register-inputs">

@@ -1,4 +1,7 @@
 <?php
+    /**
+     * script to create json object for js response to show client side validations on registration form 
+     */
     require 'connect.php';
     $get_data_query = "SELECT email, contact,username FROM registered_user";
     $get_results = mysqli_query($connection,$get_data_query);
@@ -12,6 +15,6 @@
             $i++;
         }
     }
-    echo json_encode($results_json);
+    echo json_encode($results_json);   //json_encoded object for the results from db
     mysqli_close($connection);
 ?>

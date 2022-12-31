@@ -1,5 +1,15 @@
 <?php
+    /**
+     *   script to show testimonials on admin section and the functionality to approve/revoke the testimonials 
+     */
+ 
+
     class testimonials{
+        /**
+         * description: fetch the testimonial history from db
+         * @param void
+         * @return (array) $results
+         */
         public static function testimonial_query(){
             require "../../db-queries/connect.php";
             $query = "SELECT testimonial.date_of_publishing, registered_user.individual_name, testimonial.description, testimonial.approved, testimonial.username
@@ -21,6 +31,11 @@
             mysqli_close($connection);
         }
 
+          /**
+         * description: build the testimonial history from db inside the admin panel for admin view
+         * @param array
+         * @return (array) $results
+         */
         public static function build_table($data = NULL){
             if($data)
             {
@@ -105,6 +120,8 @@
     }
 
 include_once '../../header.php';
+
+   //conditional to restrict only admins to view the testimonial history section in admin panel
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && $_SESSION['member_type'] == 'admin')
     {
         if(isset($_SESSION['testimonial_admin_approval']) && $_SESSION['testimonial_admin_approval'] == "update_success"){

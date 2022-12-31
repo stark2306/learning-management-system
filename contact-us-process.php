@@ -1,9 +1,16 @@
 <?php
-
+/**
+ *  description: function to sanitize the form data to prevent malicious scripts in input fields
+ *  @param string
+ *   @return (string) $field_data
+ */
 function sanitize_form_data($field_data){
     return htmlspecialchars(trim($field_data));
 }
 
+/**
+ *  handling of contact us form data and backend validations
+ */
 if($_SERVER['REQUEST_METHOD'] == 'POST' ){
         if(isset($_POST['contact_us_form']) && $_POST['contact_us_form'] == 'contact_us_submit')
         {
@@ -18,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
             }
             else
             {
-                echo "Fields marked with * needs to be filled";
+                echo "Please provide information in all the fields";
             }
         }
     

@@ -21,9 +21,9 @@
         return htmlspecialchars(trim($field_data));
     }
 
-/**
- *  Conditionals to run on submitting the registration form 
-*/
+    /**
+     *  handling of registeration form data and backend validations
+    */
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['registration_submit']) && $_POST['registration_submit'] == 'registration_form_submit')
             {
@@ -48,7 +48,7 @@
                 }
                 else
                 {
-                    echo "Fields marked with * needs to be filled";
+                    echo "Please provide information in all the fields";
                 }
             }
         

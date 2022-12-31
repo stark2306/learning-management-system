@@ -1,4 +1,7 @@
 <?php
+  
+  //Template : About Us
+
   include_once 'header.php';    //header of the website
   ?>
 
@@ -44,6 +47,11 @@
 </section>
 
 <?php
+    /**
+     *  description: fetch the approved testimonials from db
+     *  @param void
+     *  @return (array) $results
+     */
     function show_testimonials(){
         include './db-queries/connect.php';
         $query = 'SELECT testimonial.description, registered_user.individual_name, registered_user.role_selected, testimonial.date_of_publishing
@@ -66,6 +74,7 @@
     ?>
     <section class="hero-slider testimonial-slider text-center">
     <?php
+    //loop to show only latest 3 approved testimonials on about us page
     for($i=0;$i<$loop;$i++)
     {
         ?>
