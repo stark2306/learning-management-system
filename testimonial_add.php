@@ -94,11 +94,7 @@
                  }
             elseif(!isset($_SESSION['sid']) || !isset($_SESSION['member_type']))
             {
-                ?>
-                <script>
-                    window.location.href="/login.php";
-                </script>
-                <?php
+                echo "Please login to your account to publish your testimonial.<a href='http://cricketacademy.test/login.php'> Click here to login Now</a>";
             }
     ?>
     <script>

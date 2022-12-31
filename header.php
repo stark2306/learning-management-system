@@ -91,38 +91,47 @@
 
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-right">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/index.php ">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/testimonial.php">testimonials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/class.php">memberships</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact.php">contact us</a>
-                        </li>
                         <?php
-                            if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'admin' || $_SESSION['member_type'] == 'member'))
-                            {   
-                                ?>
-                            <li class="nav-item">
-                            <a class="nav-link" href="/logout.php">logout</a>
-                            </li>
-                                <?php
+                            include './db-queries/connect.php';
+                            $page_query = "SELECT * FROM page";
+                            if(mysqli_query($connection, $page_query)){
+                                $results = mysqli_fetch_all(mysqli_query($connection, $page_query), MYSQLI_ASSOC);
+                                if(count($results) >0 ){
+                                   for($i=0;$i<count($results);$i++)
+                                   {
+                                        if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'member' || $_SESSION['member_type'] == 'admin')){
+                                            if($i == 4){
+                                                ?>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/logout.php">logout</a>
+                                            </li>
+                                            <li class="nav-item"><?php echo $_SESSION['user_display_name'];?></li>
+                                                <?php
+                                                break;
+                                            }
+                                        }
+                                        elseif(!isset($_SESSION['sid']) || !isset($_SESSION['member_type'])){
+                                            if($i==4 || $i==5)
+                                            {
+                                            ?>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="<?php echo $results[$i]['uri']?>"><?php echo $results[$i]['page']?><span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <?php
+                                            }
+                                        }
+                                        if($i<4)
+                                        {
+                                            ?>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="<?php echo $results[$i]['uri']?>"><?php echo $results[$i]['page']?><span class="sr-only">(current)</span></a>
+                                            </li>
+                                        <?php
+                                        }
+                                    }
                                 }
-                            else
-                            {
-                              ?>
-                            <li class="nav-item">
-                            <a class="nav-link" href="/login.php">login</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="/registeration.php">register now</a>
-                            </li>
-                                <?php
                             }
+                            mysqli_close($connection);
                         ?>
                     </ul>
                 </div>
