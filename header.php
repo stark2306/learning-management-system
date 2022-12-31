@@ -1,3 +1,7 @@
+<?php
+     session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +40,6 @@
 </head>
 
 <body>
-
     <header class="shadow  bg-grey">
         <div class="container">
             <div class="top-header py-2">
@@ -92,27 +95,39 @@
                             <a class="nav-link" href="/index.php ">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about.php">ABOUT</a>
+                            <a class="nav-link" href="/testimonial.php">testimonials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/testimonial.php">gallery</a>
+                            <a class="nav-link" href="/class.php">memberships</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact.php">contact us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register.php">register now</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/membership.php">memberhsip</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/admin.php">admin</a>
-                        </li>
+                        <?php
+                            if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'admin' || $_SESSION['member_type'] == 'member'))
+                            {   
+                                ?>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/logout.php">logout</a>
+                            </li>
+                                <?php
+                                }
+                            else
+                            {
+                              ?>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/login.php">login</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/registeration.php">register now</a>
+                            </li>
+                                <?php
+                            }
+                        ?>
                     </ul>
                 </div>
+                <i class="fa-solid fa-user"></i>    
                 <form class="form-inline my-2 my-lg-0">
-                    <button type="button" class="btn-lg cmn-btn d-md-block  text-uppercase rounded-0 ">book your happiness</button>
                 </form> 
             </nav>
         </div>

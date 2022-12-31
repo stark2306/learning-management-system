@@ -1,7 +1,11 @@
 $(document).ready(function () {
+<<<<<<< HEAD
     $.getJSON('../../db-queries/connect.php', function(data) {
         console.log(data);
    })
+=======
+
+>>>>>>> 9b4ff4afadcc5c6b4afe10e5496b0de6f733e905
     function trim_data(field_data) {
         let data = field_data.trim();
         return data;

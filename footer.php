@@ -59,16 +59,16 @@
                     <h5 class="mb-4">Quick Link</h5>
                     <ul class="d-flex flex-wrap">
                         <li>
-                            <a href="#">About</a>
+                            <a href="http://cricketacademy.test/about.php">About</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="http://cricketacademy.test/contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="#">Advisors</a>
+                            <a href="http://cricketacademy.test/gallery.php">Gallery</a>
                         </li>
                         <li>
-                            <a href="#">Carrers</a>
+                            <a href="http://cricketacademy.test/class.php">Memberships</a>
                         </li>
                     </ul>
                 </div>

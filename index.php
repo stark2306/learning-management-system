@@ -1,6 +1,5 @@
 <?php
   include_once 'header.php';    //header of the website
-
   ?>
 
 <section class="hero-slider">
@@ -26,8 +25,7 @@
 
 <section class="about container text-center py-5">
   <h2 class="mb-4">Who We Are</h2>
-  <h4 class="w-60">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem omnis dolores, sint, quia
-    reprehenderit
+  <h4 class="w-60">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem omnis dolores, sint, quia reprehenderit
     quod harum, consectetur aliquam reiciendis aspernatur. Possimus nostrum praesentium, recusandae at explicabo dolores
     provident animi.</h4>
   <!-- I used bootstrap structure for this section -->
@@ -120,7 +118,7 @@
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
                 href="/register.php">Read more</a></li>
           </ol>
-          <a href="#" class="cmn-btn">Read more</a>
+          <a href="http://cricketacademy.test/class.php" class="cmn-btn">Read more</a>
         </div>
       </article>
 
@@ -132,10 +130,9 @@
   <div class="container text-center">
     <h2 class="mb-4">GET IN TOUCH</h2>
     <H5 class="w-60">
-      You’ll have the opportunity to excel professionally and personally, being part of a team that dedicated to
-      furthering our academic endeavours.
+    You’ll have the opportunity to excel professionally and personally, being part of a team that dedicated to furthering our academic endeavours.
     </H5>
-    <a href="/register.php" class="cmn-btn d-inline-block mb-4 mt-5">GET IN TOUCH</a>
+    <a href="/contact.php" class="cmn-btn d-inline-block mb-4 mt-5">GET IN TOUCH</a>
   </div>
 </section>
 
