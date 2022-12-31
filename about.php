@@ -2,7 +2,7 @@
   include_once 'header.php';    //header of the website
   ?>
 
-
+<main>
 <section class="about-us container text-center pt-1 pb-5">
   <h1>MEET THE TEAM</h1>
   <H3>
@@ -70,7 +70,7 @@
     {
         ?>
                 <article>
-                    <img src="http://cricketacademy.test/includes/images/slider-2.jpg" alt="slider-img-1">
+                    <img src="http://cricketacademy.test/includes/images/testimonial-bg.png" alt="testimonial-background">
                     <div class="inner-content">
                     <H4>“<?php echo $testimonial_data[$i][0] ?>”</H4>
                         <article class="text-center mt-4">
@@ -92,6 +92,7 @@
 <section class="container my-3 text-center">
     <a href="http://cricketacademy.test/testimonial.php" class="cmn-btn my-3 d-inline-block">View More Testimonials</a>
 </section>
+</main>
         <?php
     }
     ?>

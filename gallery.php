@@ -2,7 +2,7 @@
     include_once 'header.php';
     ?>
 
-
+<main>
 <section class="img-gallery">
     <section class="container text-center">
         <h1>Explore the Academy</h1>
@@ -57,7 +57,7 @@
         </div>
     </section>
 </section>
-
+</main>
 <?php
    include_once 'footer.php';    //footer of the website
 ?>
