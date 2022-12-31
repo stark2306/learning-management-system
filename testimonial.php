@@ -1,5 +1,8 @@
 <?php
     include_once 'header.php';
+    ?>
+    <main>
+    <?php
     include_once './includes/testimonial_class.php';
 
     $results = testimonials::show_testimonials();
@@ -12,7 +15,7 @@
                     for($i=0;$i<count($results);$i++){
                             ?>
                               <article>
-                                <img src="http://cricketacademy.test/includes/images/slider-3.jpeg" alt="slider-img-1">
+                                <img src="http://cricketacademy.test/includes/images/testimonial-bg.png" alt="testimonial-background">
                                 <div class="inner-content">
                                 <h4>“<?php echo $results[$i]['description'];?>”</h4>
                                     <article class="text-right mt-3">
@@ -57,6 +60,8 @@
     })
     </script>
     <?php
-
+    ?>
+    </main>
+    <?php
     include_once 'footer.php';
 ?>

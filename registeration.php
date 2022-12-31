@@ -18,7 +18,9 @@
     elseif(isset($_GET['activation_status']) && $_GET['activation_status'] == 'updatefailed'){
         echo "<div class='alert alert-danger' style='text-align: center;'>Sorry, there was an error in updating your request status.</div>";
     }
-
+    ?>
+    <main>
+    <?php
     include_once './includes/class_cards_registration.php';
     ?>
 
@@ -60,7 +62,7 @@
         </div>
     </div>
 </section>
-
+</main>
 <?php
     include_once 'footer.php';
 ?>

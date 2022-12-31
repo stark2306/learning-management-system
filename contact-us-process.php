@@ -9,6 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' ){
         {
             if($_POST['name'] && $_POST['email'] && $_POST['contact'] && $_POST['message'])
             {
+                $date = date('Y-m-d H:i:s');
                 $recipient_name = sanitize_form_data($_POST['name']);
                 $recipient_email = sanitize_form_data($_POST['email']);
                 $recipient_contact = sanitize_form_data($_POST['contact']);

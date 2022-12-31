@@ -22,7 +22,7 @@
             form="registration_form" value="registration_form_submit" name="registration_submit">SUBMIT</button>
     </div>
 </div> -->
-
+<main>
 <section class="hero-banner parallax overlay contact-us" style="background-image:url('/includes/images/contact.jpg')">
     <div class="container px-3">
         <div class="row align-items-center">
@@ -47,6 +47,7 @@
         </div>
     </div>
 </section>
+</main>
 
 <?php
     include_once 'footer.php';
