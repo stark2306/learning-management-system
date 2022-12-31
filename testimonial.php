@@ -1,5 +1,8 @@
 <?php
     include_once 'header.php';
+    ?>
+    <main>
+    <?php
     include_once './includes/testimonial_class.php';
 
     $results = testimonials::show_testimonials();
@@ -57,6 +60,8 @@
     })
     </script>
     <?php
-
+    ?>
+    </main>
+    <?php
     include_once 'footer.php';
 ?>

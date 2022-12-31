@@ -11,6 +11,7 @@
         echo "<div class='alert alert-danger' style='text-align: center;'>Invalid Login Credentials</div>";
     }
 ?>
+<main>
     <form method="POST" name="login_form" id="login_form" action="login-processing.php">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" class="register-inputs">
@@ -19,6 +20,7 @@
     </form>
     <button class="btn btn-lg btn-warning text-center registration_submit_btn" type="submit"
             form="login_form" value="login_form_submit" name="login_submit">Login</button>
+</main>
 <?php
     include_once 'footer.php';
 ?>

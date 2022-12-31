@@ -1,7 +1,7 @@
 <?php
   include_once 'header.php';    //header of the website
   ?>
-
+<main>
 <section class="hero-slider">
   <div>
     <img src="/includes/images/slider-1.jpeg" alt="slider-img-1">
@@ -136,6 +136,7 @@
     <a href="/contact.php" class="cmn-btn d-inline-block mb-4 mt-5">GET IN TOUCH</a>
   </div>
 </section>
+</main>
 
 
 <?php
