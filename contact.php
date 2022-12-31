@@ -1,51 +1,53 @@
 <?php
     include_once 'header.php';
+
+    if(isset($_GET['status']) && $_GET['status'] == 'success'){
+        echo "<div class='alert alert-success' style='text-align: center;'>Your request has been raised. Our officials will reach you within 24 hrs.</div>";
+    }
+    elseif(isset($_GET['status']) && $_GET['status'] == 'failed'){
+        echo "<div class='alert alert-danger' style='text-align: center;'>There was an error in raising your request. Please try again.</div>";
+    }
     ?>
 
-<div class="container d-flex align-items-center registration">
-    <div class="registration-form-container">
+<!-- <div class="container d-flex align-items-center registration my-5">
+    <div class="registration-form-container bg-secondary">
         <h1>Connect With Us</h1>
-        <p>Fields marked with <sup class="required-mark">*</sup> are mandatory</p>
         <form method="post" name="register_yourself" id="registration_form" action="functions.php">
-            <label for="name">Name<sup class="required-mark">*</sup></label>
-            <input type="text" id="name" class="register-inputs" name="name">
-            <label for="email">Email<sup class="required-mark">*</sup></label>
-            <input type="email" id="email" class="register-inputs" name="email">
-            <label for="contact">Contact<sup class="required-mark">*</sup></label>
-            <input type="text" id="contact" class="register-inputs" name="contact">
-            <label for="contact">Message<sup class="required-mark">*</sup></label>
-            <textarea name="" id="" cols="41" rows="8"></textarea>
-            <!-- <label for="registration_role">Registering as<sup class="required-mark">*</sup></label> -->
-            <!-- <select name="registeration_role" id="registration_role">
-            <option value="">Select Role</option>
-            <option value="admin">Admin</option>
-            <option value="member">Coach/Player</option>
-            <option value="public">Public</option>
-        </select> -->
+            <input type="text" id="name" class="register-inputs" name="name" placeholder="NAME">
+            <input type="email" id="email" class="register-inputs" name="email" placeholder="EMAIL">
+            <input type="text" id="contact" class="register-inputs" name="contact" placeholder="CONTACT">
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="MESSAGE"></textarea>
         </form>
-        <button class="btn btn-lg btn-warning text-center registration_submit_btn" type="submit"
-            form="registration_form" value="registration_form_submit" name="registration_submit">Register</button>
+        <button class="btn btn-lg btn-primary text-center registration_submit_btn mt-4" type="submit"
+            form="registration_form" value="registration_form_submit" name="registration_submit">SUBMIT</button>
     </div>
-</div>
-<?php
-    if(isset($_GET['activation']) && $_GET['activation'] == 'sent'){
-        echo "Please refer the mail entered above to activate your registration.";
-    }
-    elseif(isset($_GET['activation']) && $_GET['activation'] == 'failed'){
-        echo "Error sending mail on above email. Try again with different mail.";
-    }
-    elseif(isset($_GET['activation']) && $_GET['activation'] == 'failed'){
-        echo "There was an error processing your request. Please try again.";
-    }
-    elseif(isset($_GET['activation']) && $_GET['activation'] == 'success'){
-        echo "Congratulations! You are now registered with us.";
-    }
+</div> -->
 
-    if(isset($_GET['activation_status']) && $_GET['activation_status'] == 'updatesuccess'){
-        echo "Congratulation, you are now registered with us.";
-    }
-    elseif(isset($_GET['activation_status']) && $_GET['activation_status'] == 'updatefailed'){
-        echo "Sorry, there was an error in updating your request status.";
-    }
+<section class="hero-banner parallax overlay contact-us" style="background-image:url('/includes/images/contact.jpg')">
+    <div class="container px-3">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-capitalize text-white text-center">
+                <div class="d-flex align-items-center registration my-5">
+                    <div class="registration-form-container">
+                        <h1>Connect With Us</h1>
+                        <form method="post" name="contact_us" id="contact_us" action="contact-us-process.php">
+                            <input type="text" id="name" class="register-inputs" name="name" placeholder="NAME">
+                            <input type="email" id="email" class="register-inputs" name="email" placeholder="EMAIL">
+                            <input type="text" id="contact" class="register-inputs" name="contact"
+                                placeholder="CONTACT">
+                            <textarea name="message" id="message" cols="30" rows="5" placeholder="MESSAGE"></textarea>
+                        </form>
+                        <button class="cmn-btn mt-4" type="submit"
+                            form="contact_us" value="contact_us_submit"
+                            name="contact_us_form">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<?php
     include_once 'footer.php';
 ?>

@@ -1,3 +1,7 @@
+<?php
+     session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,59 +33,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- css link -->
     <link rel="stylesheet" href="style.css">
+      <!-- links for slick slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+				
 </head>
 
 <body>
-
-    <!-- <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">STATISTICS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">GALLERY</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">MEMBERSHIP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT US</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register.php">SIGN UP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login.php">LOGIN</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header> -->
-
-
     <header class="shadow  bg-grey">
         <div class="container">
             <div class="top-header py-2">
                 <div class="row">
                     <div class="col-6 col-md-8">
                         <a class=" mr-4" href="#" data-toggle="tooltip" data-placement="bottom"
-                            title="28 jackson street, chicago, 7788569 USA">
+                            title="28 jackson street, dublin, 7788569 IRE">
                             <span class="material-icons">
                                 location_on
                             </span>
                             <span class="d-none d-md-inline">
-                                28 jackson street, chicago, 7788569 USA
+                                28 jackson street, Dublin, 7789 IRE
                             </span>
                         </a>
 
@@ -91,7 +61,7 @@
                                 mail
                             </span>
                             <span class="d-none d-md-inline">
-                                info.dento@gmail.com
+                                info.cricket@gmail.com
                             </span>
                         </a>
                     </div>
@@ -125,23 +95,43 @@
                             <a class="nav-link" href="/index.php ">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">STATISTICS</a>
+                            <a class="nav-link" href="/testimonial.php">testimonials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">gallery</a>
+                            <a class="nav-link" href="/class.php">memberships</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact.php">contact us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register.php">register now</a>
-                        </li>
+                        <?php
+                            if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'admin' || $_SESSION['member_type'] == 'member'))
+                            {   
+                                ?>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/logout.php">logout</a>
+                            </li>
+                                <?php
+                                }
+                            else
+                            {
+                              ?>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/login.php">login</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/registeration.php">register now</a>
+                            </li>
+                                <?php
+                            }
+                        ?>
                     </ul>
                 </div>
+                <i class="fa-solid fa-user"></i>    
                 <form class="form-inline my-2 my-lg-0">
-                    <button type="button" class="btn-lg cmn-btn d-md-block  text-uppercase rounded-0 ">book your happiness</button>
                 </form> 
             </nav>
         </div>
     </header> 
     
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
