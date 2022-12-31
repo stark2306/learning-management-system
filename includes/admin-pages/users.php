@@ -22,6 +22,7 @@
             {
                 $serial_number = 1;
             ?>
+             <section class="col-10 py-5">
             <h3 align="center">Registered Users</h3>
              <div class="table-responsive">
                     <table class="table table-bordered">
@@ -68,11 +69,22 @@
                         ?>
             </table>
          </div>
+         </section>
+</article>
+</section>
+</main>
             <?php
             }
         else
         {
-            echo "<h3>No results found</h3>";
+            ?>
+            <section class="col-10 py-5">
+            <?php echo "<h3>No results found</h3>";?>
+            </section>
+            </article>
+            </section>
+            </main>
+        <?php
         }
         }
     }

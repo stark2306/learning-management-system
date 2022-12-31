@@ -105,7 +105,6 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="/logout.php">logout</a>
                                             </li>
-                                            <li class="nav-item"><?php echo $_SESSION['user_display_name'];?></li>
                                                 <?php
                                                 break;
                                             }
@@ -134,6 +133,7 @@
                             mysqli_close($connection);
                         ?>
                     </ul>
+                    <?php echo "<span class='logged-in-user'>".$_SESSION['user_display_name']."</span>";?>
                 </div>
                 <i class="fa-solid fa-user"></i>    
                 <form class="form-inline my-2 my-lg-0">

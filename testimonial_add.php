@@ -1,7 +1,9 @@
 <?php
     include_once 'header.php';
     include_once './includes/testimonial_class.php';
-    
+    ?>
+    <main>
+    <?php
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'member' || $_SESSION['member_type'] == 'admin')){
             if(isset($_GET['membership_class'])){
                 $membership_class = $_GET['membership_class'];
@@ -97,6 +99,7 @@
                 echo "Please login to your account to publish your testimonial.<a href='http://cricketacademy.test/login.php'> Click here to login Now</a>";
             }
     ?>
+    </main>
     <script>
     $(document).ready(function(){
         $('form#my_testimonial').submit(function(){

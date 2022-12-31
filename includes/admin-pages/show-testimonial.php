@@ -25,6 +25,7 @@
             if($data)
             {
                 ?>
+              <section class="col-10 py-5">
             <h3 align="center">Testimonials</h3>
              <div class="table-responsive">
                     <table class="table table-bordered">
@@ -84,10 +85,21 @@
               ?>
                 </table>
             </div>
+            </section>
+  </article>
+  </section>
+  </main>
               <?php
             }
         else{
-            echo "<h3>No results found</h3>";
+            ?>
+            <section class="col-10 py-5">
+            <?php echo "<h3>No results found</h3>";?>
+            </section>
+            </article>
+            </section>
+            </main>
+            <?php
         }
      }
     }
@@ -95,11 +107,11 @@
 include_once '../../header.php';
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && $_SESSION['member_type'] == 'admin')
     {
-        if($_SESSION['testimonial_admin_approval'] == "update_success"){
+        if(isset($_SESSION['testimonial_admin_approval']) && $_SESSION['testimonial_admin_approval'] == "update_success"){
             echo "<div class='alert alert-success text-center'>Status Updated</div>";
         }
-        elseif($_SESSION['testimonial_admin_approval'] == "update_failed"){
-
+        elseif(isset($_SESSION['testimonial_admin_approval']) && $_SESSION['testimonial_admin_approval'] == "update_failed"){
+            echo "<div class='alert alert-danger text-center'>Update Failed</div>";
         }
         include_once "./admin-sidebar.php";
         $results = testimonials::testimonial_query();

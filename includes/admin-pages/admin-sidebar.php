@@ -32,9 +32,3 @@
           </ul>
         </nav>
       </aside>
-      <section class="col-10 py-5">
-
-      </section>
-    </article>
-  </section>
-</main>
