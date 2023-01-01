@@ -1,6 +1,11 @@
 <?php
     //Template: class details 
 
+    /**
+     *  Note: this section has hard coded of bullet points displayed on cards and is under construction now and will become dynamic after phase-2 is
+     * completed.
+     */
+
     include_once 'header.php';
 
     if(isset($_GET['membership']))
