@@ -25,11 +25,13 @@
                     $results = $testimonial->show_testimonials($username);
             ?>
             <!--  testimonial form -->
+            <section class="container">
             <form name="my_testimonial" id="my_testimonial" method="post">
                 <textarea name="add_testimonial" id="my-testimonial" cols="30" rows="10" placeholder="Add your testimonial...." required></textarea>
             </form>
             <button form="my_testimonial" type="submit" class="btn btn-lg btn-success text-center text-white" name="testimonial_type" value="publish_my_testimonial">Publish Testimonial</button>
             <button onclick="window.location.href='/testimonial.php'" class="btn btn-lg btn-primary text-center text-white">View All Testimonial</button>
+            </section>
             <?php 
                    //bulid testimonial history table of the currently logged in user
                     if(count($results) >0)
@@ -97,7 +99,7 @@
                     }
                     else{
                         ?>
-                        <div class="fluidcontainer bg-dark text-center text-white mt-3">No Results Found</div>
+                        <div class="fluidcontainer text-center text-danger mt-5" style="font-size: 25px;">No Results Found</div>
                         <?php
                     }
                  }

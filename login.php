@@ -16,14 +16,16 @@
 ?>
 <main>
     <!-- login form -->
-    <form method="POST" name="login_form" id="login_form" action="login-processing.php">
+    <section class="login-form container my-5 text-center">
+    <form method="POST" name="login_form" id="login_form" action="login-processing.php" class="mx-auto text-left">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" class="register-inputs" required>
         <label for="password">Password</label>
         <input type="password" id="password" name="password" class="register-inputs" required>
     </form>
-    <button class="btn btn-lg btn-warning text-center registration_submit_btn" type="submit"
+    <button class="btn btn-lg btn-success text-center text-white registration_submit_btn" type="submit"
             form="login_form" value="login_form_submit" name="login_submit">Login</button>
+   </section>
 </main>
 <?php
     include_once 'footer.php';

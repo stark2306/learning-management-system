@@ -471,6 +471,21 @@ main, aside{
         color: goldenrod;
 }
 
+/* CSS for admin panel */
+.login-form form{
+    max-width: 320px;
+}
+
+.login-form form input{
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.membership-select {
+    width: 100%;
+    padding: 5px;
+}
+
 /* CSS for footer */
 
 footer .container {

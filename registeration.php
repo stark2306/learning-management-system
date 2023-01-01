@@ -30,21 +30,17 @@
     ?>
     <main>
     
-    <?php
-        include_once './includes/class_cards_registration.php';   //template for membership cards showing on registration page
-    ?>
-
 
 <section class="contact-us registration-form">
     <div class="container px-3 pb-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <img src="/includes/images/register.png" alt="">
+            <?php include_once './includes/class_cards_registration.php'; ?>
             </div>
             <div class="col-lg-6 text-capitalize text-white text-center">
                 <div class="d-flex align-items-center registration my-5">
                     <div class="registration-form-container">
-
+                    <img src="/includes/images/register.png" alt="" class="mb-4">
                     <!-- Registeration Form -->
                         <h3>Register Now</h3>
                         <form method="post" name="register_yourself" id="registration_form" action="registration-process.php">
@@ -58,8 +54,8 @@
                                 name="original_password" placeholder="ENTER PASSWORD">
                             <input type="password" id="confirm_password" class="register-inputs" name="confirm_password"
                                 placeholder="RE-ENTER PASSWORD">
-                            <label for="select-class">Select the class for which you want to register</label>
-                                <select name="registeration_role" id="registration_role">
+                            <label for="select-class" class="mt-3">Select the class for which you want to register</label>
+                                <select name="registeration_role" id="registration_role" class="membership-select" required>
                                     <option value="" disabled selected>Select Class</option>
                                     <option value="Master Blaster">Master Blaster</option>
                                     <option value="Ace the pitch">Ace the pitch</option>

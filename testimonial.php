@@ -42,11 +42,13 @@
     }
     else{
         ?>
-        <div class="fluidcontainer bg-dark text-center text-white mt-3">No Results Found</div>
+        <div class="fluidcontainer text-center text-danger mt-5" style="font-size: 25px;">No Results Found</div>
         <?php
     }
 ?>
-       <button onclick="location.href='/testimonial_add.php'" class="btn btn-lg btn-success text-center text-white">Publish your testimonial</button>
+      <article class="text-center container">
+      <button onclick="location.href='/testimonial_add.php'" class="btn btn-lg btn-success my-4 text-white">Publish your testimonial</button>
+      </article>
   <script>
     $(document).ready(function(){
         $('form#my_testimonial').submit(function(){
