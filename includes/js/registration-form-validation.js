@@ -1,10 +1,20 @@
 $(document).ready(function () {
 
+    /*
+        description: function to sanitize the input field data
+        @param (string) field_data
+        @return (string) data
+    */
     function trim_data(field_data) {
         let data = field_data.trim();
         return data;
     }
-
+   
+    /**
+     * description: show validation message for username, email, and contact fields after processing the data through show_validations() function
+     * @param (string) selector_in_focus, (bool) exist_status 
+     * @return (void)
+     */
     function show_validation_message(selector_in_focus, exist_status){
         if(exist_status)
         {
@@ -20,6 +30,11 @@ $(document).ready(function () {
         }
     }
 
+    /**
+     * description: function to process the username, email, and contact fields and make comparison to ensure that these fields have a unique value entered in db
+     * @param  (string) data, (string) selector_in_focus, (string) selector, (string) value_entered 
+     * @return (void)
+     */
     function show_validations(data,selector_in_focus,selector,value_entered){
         console.log(value_entered)
         let comparison_value = "";
@@ -61,6 +76,12 @@ $(document).ready(function () {
         }
     }
 
+    /**
+     * description: get the json response from db for email, contact, username and show validation message accordingly to ensure that these fields
+     *                         in db have unique values
+     * @param (string) selector 
+     * @return (void)
+     */
     function check_validity(selector){
         let selector_in_focus = "input#".concat(selector)
       
@@ -72,6 +93,9 @@ $(document).ready(function () {
             });
         }
 
+    /*
+       pass the selector in focus as parameter to check_validity function
+    */
     $("input").focusin(function(){
         let selector = $(this).attr('id');
         if(selector == 'email' || selector == 'contact' || selector == 'username')
@@ -80,6 +104,10 @@ $(document).ready(function () {
         }
     });
 
+    /*
+        show validation message on clicking the form submit button by making various comparisons and disable the submit button accordingly to prevent
+        submitting the invalid data through registeration form
+    */ 
     $('button.registration_submit_btn').on('click', () => {
         $("#registration_form>input").each(function (event) {
             let selector_id = $(this).attr('id');
@@ -131,7 +159,11 @@ $(document).ready(function () {
         }
     });
 
-    
+    /**
+     *  description: show required validation label on skipping a mandatory/required field
+     * @param (string) selector_id, (string) field_value 
+     * @return void 
+     */
    function validation_message(selector_id, field_value) {
         if (!field_value) {
             selector_id = '#'.concat(selector_id);
