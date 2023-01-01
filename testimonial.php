@@ -40,7 +40,9 @@
         <?php
     }
 ?>
-       <button onclick="location.href='/testimonial_add.php'" class="btn btn-lg btn-success text-center text-white">Publish your testimonial</button>
+      <article class="text-center container">
+      <button onclick="location.href='/testimonial_add.php'" class="btn btn-lg btn-success my-4 text-white">Publish your testimonial</button>
+      </article>
   <script>
     $(document).ready(function(){
         $('form#my_testimonial').submit(function(){

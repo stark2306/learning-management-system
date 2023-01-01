@@ -95,10 +95,10 @@
 include_once '../../header.php';
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && $_SESSION['member_type'] == 'admin')
     {
-        if($_SESSION['testimonial_admin_approval'] == "update_success"){
+        if(isset($_SESSION['testimonial_admin_approval']) && $_SESSION['testimonial_admin_approval']== "update_success"){
             echo "<div class='alert alert-success text-center'>Status Updated</div>";
         }
-        elseif($_SESSION['testimonial_admin_approval'] == "update_failed"){
+        elseif(isset($_SESSION['testimonial_admin_approval']) && $_SESSION['testimonial_admin_approval'] == "update_failed"){
 
         }
         include_once "./admin-sidebar.php";

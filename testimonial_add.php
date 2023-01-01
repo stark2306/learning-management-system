@@ -17,35 +17,40 @@
                 }
                     $results = $testimonial->show_testimonials($username);
             ?>
-            <form name="my_testimonial" id="my_testimonial" method="post">
-                <textarea name="add_testimonial" id="my-testimonial" cols="30" rows="10" placeholder="Add your testimonial...." required></textarea>
-            </form>
-            <button form="my_testimonial" type="submit" class="btn btn-lg btn-success text-center text-white" name="testimonial_type" value="publish_my_testimonial">Publish Testimonial</button>
-            <button onclick="window.location.href='/testimonial.php'" class="btn btn-lg btn-primary text-center text-white">View All Testimonial</button>
-            <?php 
+<section class="container">
+    <form name="my_testimonial" id="my_testimonial" method="post">
+        <textarea name="add_testimonial" id="my-testimonial" cols="20" rows="4" placeholder="Add your testimonial...."
+            required></textarea>
+    </form>
+    <button form="my_testimonial" type="submit" class="btn btn-lg btn-success text-center text-white"
+        name="testimonial_type" value="publish_my_testimonial">Publish Testimonial</button>
+    <button onclick="window.location.href='/testimonial.php'" class="btn btn-lg btn-primary text-center text-white">View
+        All Testimonial</button>
+</section>
+<?php 
                     if(count($results) >0)
                     {
                     ?>
-                    <h2 align="center">My Testimonials</h2>
-                    <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead class="thead-dark text-center">
-                            <tr>
-                                <th>Serial No.</th>
-                                <th>Testimonial Description</th>
-                                <th>Membership</th>
-                                <th>Published On</th>
-                                <th>Status</th> 
-                            </tr>
-                        </thead>
-                        <?php
+<h2 align="center">My Testimonials</h2>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="thead-dark text-center">
+            <tr>
+                <th>Serial No.</th>
+                <th>Testimonial Description</th>
+                <th>Membership</th>
+                <th>Published On</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <?php
                             $index = 0;
                             foreach($results as $testimonialdata){
                                 $index = $index+1;
                                 ?>
-                                <tr>
-                                    <td><?php echo $index;?></td>
-                                <?php
+        <tr>
+            <td><?php echo $index;?></td>
+            <?php
                                 foreach($testimonialdata as $key => $value){
                                     if($key == 'individual_name')
                                     {
@@ -66,56 +71,56 @@
                                             $text = "<span class='text-danger'>Dismissed</span>";
                                         }
                                         ?>
-                                            <td><?php echo $text;?></td>
-                                        <?php
+            <td><?php echo $text;?></td>
+            <?php
                                     }
                                     elseif($key != 'approved')
                                     {
                                         ?>
-                                         <td><?php echo $value;?></td>
-                                        <?php
+            <td><?php echo $value;?></td>
+            <?php
                                     }
                                 }
                                 ?>
-                                    </tr>
-                        <?php
+        </tr>
+        <?php
                             }
                         ?>
-                    </table>
-                    </div>
-      
+    </table>
+</div>
+
 <?php
                     }
                     else{
                         ?>
-                        <div class="fluidcontainer bg-dark text-center text-white mt-3">No Results Found</div>
-                        <?php
+<div class="fluidcontainer bg-dark text-center text-white mt-3">No Results Found</div>
+<?php
                     }
                  }
             elseif(!isset($_SESSION['sid']) || !isset($_SESSION['member_type']))
             {
                 ?>
-                <script>
-                    window.location.href="/login.php";
-                </script>
-                <?php
+<script>
+    window.location.href = "/login.php";
+</script>
+<?php
             }
     ?>
-    <script>
-    $(document).ready(function(){
-        $('form#my_testimonial').submit(function(){
+<script>
+    $(document).ready(function () {
+        $('form#my_testimonial').submit(function () {
             $(this).reset();
         });
-            $('.hero-slider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        autoplay: true,
-        arrows: false,
-        autoplaySpeed: 2000,
-    });
+        $('.hero-slider').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            autoplay: true,
+            arrows: false,
+            autoplaySpeed: 2000,
+        });
     })
-    </script>
+</script>
 
 <?php
 

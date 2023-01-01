@@ -11,14 +11,17 @@
         echo "<div class='alert alert-danger' style='text-align: center;'>Invalid Login Credentials</div>";
     }
 ?>
-    <form method="POST" name="login_form" id="login_form" action="login-processing.php">
+   <section class="login-form container my-5 text-center">
+   <form method="POST" name="login_form" id="login_form" action="login-processing.php" class="mx-auto text-left">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" class="register-inputs">
         <label for="password">Password</label>
         <input type="password" id="password" name="password" class="register-inputs">
-    </form>
-    <button class="btn btn-lg btn-warning text-center registration_submit_btn" type="submit"
+        <button class="btn btn-lg btn-warning text-center registration_submit_btn my-3" type="submit"
             form="login_form" value="login_form_submit" name="login_submit">Login</button>
+    </form>
+    
+   </section>
 <?php
     include_once 'footer.php';
 ?>
