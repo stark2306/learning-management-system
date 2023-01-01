@@ -7,14 +7,14 @@
     {
         $bullet = new stdClass();
         $membership = $_GET['membership'];    //get the membership passed via the url from class page
+        $bullet->point1 = "Get expert guidance from world class coaches and professionals";
+        $bullet->point2 = "Weekly net practices with trained professionals from different countries.";
+        $bullet->point3 = "Perfomance analysis with high grade equipments to nurture high level skills";
+        $bullet->point4 = "4000+ practice sessions, club competitions, 1-On-1 24x7 training counselling";
+        $bullet->point5 = "Incentives and scholarships for exceptional talent";
         switch($membership){   
             case 'master_blaster': $membership = 'Master Blaster';
             $feature_img = "./includes/images/master-blaster.jpeg";
-            $bullet->point1 = "Get expert guidance from world class coaches and professionals";
-            $bullet->point2 = "Weekly net practices with trained professionals from different countries.";
-            $bullet->point3 = "Perfomance analysis with high grade equipments to nurture high level skills";
-            $bullet->point4 = "4000+ practice sessions, club competitions, 1-On-1 24x7 training counselling";
-            $bullet->point5 = "Incentives and scholarships for exceptional talent";
             break;
 
             case 'ace_the_pitch': $membership = 'Ace the pitch';
@@ -42,9 +42,9 @@
             $query = "SELECT class.description, fee.fee FROM fee LEFT JOIN class ON class.title = fee.membership WHERE class.title = '$membership'";
             if(mysqli_query($connection, $query)){
                 $row = mysqli_fetch_row(mysqli_query($connection, $query));
-                echo "<img src='$feature_img'>";
+                echo "<section class='container memberships-desc text-center my-5'><img src='$feature_img'>";
                 echo "<h2>".$membership." - $".$row[1]."/month</h2>";
-                echo "<h3>".$row[0]."</h3>";
+                echo "<h3 class='my-3'>".$row[0]."</h3>";
                 echo "Key highlights of the program : -";
                 $points = json_decode($bullet, true);
                 $index = 1;
@@ -53,6 +53,7 @@
                     $index ++;
                 }
             }
+                echo "</section>";
             mysqli_close($connection);
         }
     

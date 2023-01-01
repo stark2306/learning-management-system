@@ -486,6 +486,10 @@ main, aside{
     padding: 5px;
 }
 
+.memberships-desc img{
+    height: 400px;
+}
+
 /* CSS for footer */
 
 footer .container {
