@@ -43,7 +43,7 @@
             if(mysqli_query($connection, $query)){
                 $row = mysqli_fetch_row(mysqli_query($connection, $query));
                 echo "<section class='container memberships-desc text-center my-5'><img src='$feature_img'>";
-                echo "<h2>".$membership." - $".$row[1]."/month</h2>";
+                echo "<h2><u>".$membership." - $".$row[1]."/month</u></h2>";
                 echo "<h3 class='my-3'>".$row[0]."</h3>";
                 echo "Key highlights of the program : -";
                 $points = json_decode($bullet, true);

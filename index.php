@@ -98,12 +98,9 @@
           </div>
           <h4 class="pY-3 text-dark">MEMBERSHIP</h4>
           <ol class="text-left text-dark">
-            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
-                href="/class.php">Read more</a></li>
-            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
-                href="/class.php">Read more</a></li>
-            <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
-                href="/class.php">Read more</a></li>
+            <li class="pb-3">Get expert guidance from world class coaches and professional.</li>
+            <li class="pb-3">Weekly net practices with trained professionals from different countries.</li>
+            <li class="pb-3">Perfomance analysis with high grade equipments to nurture high level skills.</li>
           </ol>
           <a href="http://cricketacademy.test/class.php" class="cmn-btn">Read more</a>
         </div>
