@@ -136,7 +136,11 @@ include_once './show-admin-page-header.php';
     }
     else
     {
-        echo("<h3>Sorry, you don't have the sufficient rights to access this page. Contact the admin</h3>");
+        ?>
+        <main>
+        <?php echo("<h3 class='mt-4 text-center'>Sorry, you don't have the sufficient rights to access this page. Contact the admin</h3>");?>
+       </main>
+        <?php
     }
     include_once '../../footer.php';
 ?>
