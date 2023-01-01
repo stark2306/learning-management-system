@@ -1,7 +1,7 @@
 <?php
      session_start();
 ?>
-<!-- header of the file-->
+<!-- header file to show on admin pages-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +92,7 @@
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-right">
                         <?php
-                            include './db-queries/connect.php';
+                            include '../../db-queries/connect.php';
                             $page_query = "SELECT * FROM page";
                             if(mysqli_query($connection, $page_query)){
                                 $results = mysqli_fetch_all(mysqli_query($connection, $page_query), MYSQLI_ASSOC);
@@ -135,11 +135,6 @@
                             mysqli_close($connection);
                         ?>
                     </ul>
-                    <?php
-                        if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && ($_SESSION['member_type'] == 'member' || $_SESSION['member_type'] == 'admin')){
-                            echo "<span class='logged-in-user ml-auto pr-4 pl-2'><span class='material-icons material-icons-outlined'>account_box</span>Hello, ".$_SESSION['user_display_name']."</span>";
-                        }
-                    ?>
                 </div>
                 <form class="form-inline my-2 my-lg-0">
                 </form> 

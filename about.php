@@ -55,7 +55,7 @@
     function show_testimonials(){
         include './db-queries/connect.php';
         $query = 'SELECT testimonial.description, registered_user.individual_name, registered_user.role_selected, testimonial.date_of_publishing
-                            FROM testimonial LEFT JOIN registered_user ON testimonial.username = registered_user.username
+                            FROM testimonial INNER JOIN registered_user ON testimonial.username = registered_user.username
                             WHERE testimonial.approved = 1';
         if(mysqli_query($connection, $query)){
             $results = mysqli_fetch_all(mysqli_query($connection, $query),MYSQLI_NUM);

@@ -1,10 +1,10 @@
 <!-- footer of the website -->
 
-<footer class="parallax overlay pt-5 pb-1" style="background-image: url(images/footer.jpg);">
+<footer class="parallax overlay pt-5 pb-1">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6 col-lg-4 mb-5">
-                    <img class="mb-4" src="images/dento-logo.png" alt="">
+                    <!-- <img class="mb-4" src="images/dento-logo.png" alt=""> -->
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum porro ipsam tenetur
                         excepturi fugiat soluta.
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div class="text-center border-top pt-3">
-                <p>Copyright ©2022 All rights reserved | The Dublin Cricket Academy</p>
+                <p>Copyright <?php echo date('Y');?> All rights reserved | The Dublin Cricket Academy</p>
             </div>
         </div>
     </footer>

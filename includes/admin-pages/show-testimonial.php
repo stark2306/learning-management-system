@@ -13,7 +13,7 @@
         public static function testimonial_query(){
             require "../../db-queries/connect.php";
             $query = "SELECT testimonial.date_of_publishing, registered_user.individual_name, testimonial.description, testimonial.approved, testimonial.username
-                                FROM testimonial LEFT JOIN registered_user ON testimonial.username = registered_user.username 
+                                FROM testimonial INNER JOIN registered_user ON testimonial.username = registered_user.username 
                                 ORDER BY testimonial.date_of_publishing DESC";
             
             if(mysqli_query($connection, $query)){
@@ -119,7 +119,7 @@
      }
     }
 
-include_once '../../header.php';
+include_once './show-admin-page-header.php';
 
    //conditional to restrict only admins to view the testimonial history section in admin panel
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && $_SESSION['member_type'] == 'admin')

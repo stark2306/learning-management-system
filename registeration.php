@@ -66,7 +66,7 @@
                                     <option value="Early Birds">Early Birds</option>
                               </select> 
                         </form>
-                        <button class="cmn-btn mt-4" type="submit" form="registration_form"
+                        <button class="cmn-btn mt-4 registration_submit_btn" type="submit" form="registration_form"
                             value="registration_form_submit" name="registration_submit">REGISTER</button>
                     </div>
                 </div>

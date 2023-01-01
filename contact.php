@@ -27,11 +27,11 @@
                         <!-- Contact Us form-->
                         <h1>Connect With Us</h1>    
                         <form method="post" name="contact_us" id="contact_us" action="contact-us-process.php">
-                            <input type="text" id="name" class="register-inputs" name="name" placeholder="NAME">
-                            <input type="email" id="email" class="register-inputs" name="email" placeholder="EMAIL">
+                            <input type="text" id="name" class="register-inputs" name="name" placeholder="NAME" required>
+                            <input type="email" id="email" class="register-inputs" name="email" placeholder="EMAIL" required>
                             <input type="text" id="contact" class="register-inputs" name="contact"
-                                placeholder="CONTACT">
-                            <textarea name="message" id="message" cols="30" rows="5" placeholder="MESSAGE"></textarea>
+                                placeholder="CONTACT" required>
+                            <textarea name="message" id="message" cols="30" rows="5" placeholder="MESSAGE" required></textarea>
                         </form>
                         <button class="cmn-btn mt-4" type="submit"
                             form="contact_us" value="contact_us_submit"

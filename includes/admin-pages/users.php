@@ -103,7 +103,7 @@
         }
     }
 
-    include_once '../../header.php';
+    include_once './show-admin-page-header.php';
     //conditional to restrict only admins to view this section and prevent unauthenticated access to this section
     if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) && $_SESSION['member_type'] == 'admin')
     {

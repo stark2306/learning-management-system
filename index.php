@@ -24,10 +24,15 @@
 </section>
 
 <section class="about container text-center py-5">
-  <h2 class="mb-4">Who We Are</h2>
-  <h4 class="w-60">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis rem omnis dolores, sint, quia reprehenderit
-    quod harum, consectetur aliquam reiciendis aspernatur. Possimus nostrum praesentium, recusandae at explicabo dolores
-    provident animi.</h4>
+  <h2 class="mb-3">Who We Are</h2>
+  <h3 class="w-60"><u>DUBLIN ACADEMY : A CRICKET ACADEMY OF SPECIALISATION</u></h3>
+  <h4 class="w-60">Our primary mission is to develop young people holistically through various programmes. Through all its activities, DUBLIN ACADEMY will be guided by the following three objectives:
+</h4>
+<ul style="list-style-type:disc;">
+        <li>To encourage youngsters to participate in sports for their enjoyment and development of physical, mental and social skills.</li>
+        <li>To offer professional coaching to young sportsmen to reach their maximum potential and to teach life skills using sports whilst empowering them and developing them to become future leaders.</li>
+        <li>To make available quality sporting equipment at affordable prices.</li>
+</ul> 
   <!-- I used bootstrap structure for this section -->
   <div class="row py-5">
     <div class="col-md-3">
@@ -76,13 +81,13 @@
           <h4 class="pY-3 text-dark">UPCOMING EVENTS</h4>
           <ol class="text-left text-dark">
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
-                href="/register.php">Read more</a></li>
+                href="/stay-tuned.php">Read more</a></li>
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
                 href="/register.php">Read more</a></li>
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
                 href="/register.php">Read more</a></li>
           </ol>
-          <a href="#" class="cmn-btn">Read more</a>
+          <a href="http://cricketacademy.test/stay-tuned.php" class="cmn-btn">Read more</a>
         </div>
       </article>
 
@@ -94,11 +99,11 @@
           <h4 class="pY-3 text-dark">MEMBERSHIP</h4>
           <ol class="text-left text-dark">
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
-                href="/register.php">Read more</a></li>
+                href="/class.php">Read more</a></li>
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
-                href="/register.php">Read more</a></li>
+                href="/class.php">Read more</a></li>
             <li class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquam.... <a
-                href="/register.php">Read more</a></li>
+                href="/class.php">Read more</a></li>
           </ol>
           <a href="http://cricketacademy.test/class.php" class="cmn-btn">Read more</a>
         </div>

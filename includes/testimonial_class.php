@@ -37,13 +37,13 @@ class testimonials{
         if($username)
         {
             $show_testimonial_query = "SELECT testimonial.description, registered_user.individual_name, registered_user.role_selected, testimonial.date_of_publishing, testimonial.approved
-                                                                    FROM testimonial LEFT JOIN registered_user ON testimonial.username = registered_user.username
+                                                                    FROM testimonial INNER JOIN registered_user ON testimonial.username = registered_user.username
                                                                     WHERE testimonial.username= '$username' ORDER BY testimonial.date_of_publishing DESC";
         }
         elseif(!$username)
         {
             $show_testimonial_query = "SELECT testimonial.description, registered_user.individual_name, registered_user.role_selected, testimonial.date_of_publishing
-                                                                    FROM testimonial LEFT JOIN registered_user ON testimonial.username = registered_user.username
+                                                                    FROM testimonial INNER JOIN registered_user ON testimonial.username = registered_user.username
                                                                     WHERE testimonial.approved = 1 ORDER BY testimonial.date_of_publishing DESC";
         }
         if(mysqli_query($connection, $show_testimonial_query)){

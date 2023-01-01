@@ -451,7 +451,7 @@ header button {
 }
 
 /* CSS for admin page */
-main{
+main, aside{
     min-height: calc(100vh - 527px);
 }
 
