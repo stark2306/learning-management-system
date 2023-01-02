@@ -9,12 +9,15 @@
       *  sessions for status of activation email after filling out the registeration form
       */
     if(isset($_SESSION['activation']) && $_SESSION['activation'] == 'sent'){
+        unset($_SESSION['activation_status']);
         echo "<div class='alert alert-success' style='text-align: center;'>We have sent an activation link on your email. Please activate your registration now.</div>";
     }
     elseif(isset($_SESSION['activation']) && $_SESSION['activation'] == 'sentfailed'){
+        unset($_SESSION['activation_status']);
         echo "<div class='alert alert-danger' style='text-align: center;'>There was an error in sending activation mail to the email provided</div>";
     }
     elseif(isset($_SESSION['activation']) && $_SESSION['activation'] == 'failed'){
+        unset($_SESSION['activation_status']);
         echo "<div class='alert alert-danger' style='text-align: center;'>Error sending mail on email entered. Try again with different mail.</div>";
     }
   
@@ -22,9 +25,11 @@
      * sessions for updated activation status of users 
      */
     if(isset($_SESSION['activation_status']) && $_SESSION['activation_status'] == 'updatesuccess'){
+        unset($_SESSION['activation']);
         echo "<div class='alert alert-success' style='text-align: center;'>Congratulations, you have successfully registered with us.</div>";
     }
     elseif(isset($_SESSION['activation_status']) && $_SESSION['activation_status'] == 'updatefailed'){
+        unset($_SESSION['activation']);
         echo "<div class='alert alert-danger' style='text-align: center;'>Activation failed</div>";
     }
     ?>
