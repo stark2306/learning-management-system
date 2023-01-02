@@ -134,6 +134,15 @@
                             }
                             mysqli_close($connection);
                         ?>
+                           <li  class="nav-item">
+                            <?php 
+                            if(isset($_SESSION['sid']) && isset($_SESSION['member_type']) &&$_SESSION['member_type'] == admin ){
+                                ?>
+                                 <a class="nav-link" href="<?php echo '../../admin.php'?>">Admin Section</span></a>
+                                <?php
+                            } 
+                            ?>
+                        </li>
                     </ul>
                 </div>
                 <form class="form-inline my-2 my-lg-0">
